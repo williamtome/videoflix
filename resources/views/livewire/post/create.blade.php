@@ -1,4 +1,6 @@
 <div>
+    <x-slot name="header">Criar Novo Post</x-slot>
+
     @if (session()->has('success'))
         <div class="w-full px-2 py-4 border border-green-500 bg-green-400 text-white">
             {{session('success')}}
