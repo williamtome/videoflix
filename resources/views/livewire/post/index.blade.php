@@ -1,9 +1,7 @@
 <div>
-    <ul>
-        @foreach($contents as $content)
-            <li class="block">{{ $content->title }}</li>
-        @endforeach
+    @foreach($posts as $post)
+        @livewire('post.content', [$post], key($post->id))
+    @endforeach
 
-    </ul>
-    {{ $contents->links() }}
+    {{ $posts->links() }}
 </div>
