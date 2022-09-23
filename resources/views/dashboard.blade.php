@@ -12,7 +12,7 @@
                     You're logged in!
                     <br>
 
-                    @livewire('test')
+                    @livewire('post.create')
 
                     <br>
 
