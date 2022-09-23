@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 Route::prefix('/posts')->name('post.')->group(function () {
     Route::get('/', \App\Http\Livewire\Post\Index::class)->name('index');
     Route::get('/create', \App\Http\Livewire\Post\Create::class)->name('create');
+    Route::get('/{post}', \App\Http\Livewire\Post\Edit::class)->name('edit');
 });
 
 require __DIR__.'/auth.php';
