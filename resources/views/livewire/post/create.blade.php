@@ -8,7 +8,6 @@
     @endif
     <h1>Exemplo componente Livewire!</h1>
 
-    Bind acontecendo aqui: {{$title}}
     <br>
 
     <div class="mb-5">
