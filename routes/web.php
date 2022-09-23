@@ -21,4 +21,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::prefix('/posts')->name('post.')->group(function () {
+    Route::get('/', \App\Http\Livewire\Post\Index::class)->name('index');
+    Route::get('/create', \App\Http\Livewire\Post\Create::class)->name('create');
+});
+
 require __DIR__.'/auth.php';
